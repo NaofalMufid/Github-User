@@ -23,14 +23,14 @@ import id.dipikul.githubuser.model.User;
 public class FollowAdapter extends RecyclerView.Adapter<FollowAdapter.FollowViewHolder> {
     private ArrayList<User> mData = new ArrayList<>();
 
+    public FollowAdapter() {
+
+    }
+
     public void setData(ArrayList<User> items) {
         mData.clear();
         mData.addAll(items);
         notifyDataSetChanged();
-    }
-
-    public FollowAdapter() {
-
     }
 
     @NonNull

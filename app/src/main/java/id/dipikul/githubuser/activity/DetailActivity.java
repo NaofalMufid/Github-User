@@ -37,12 +37,7 @@ import id.dipikul.githubuser.model.User;
 
 public class DetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
     public static final String EXTRA_USER = "extra_user";
-    private String uName;
-
     private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 20;
-    private boolean isAvatarShown = true;
-    private int maxScrollSize;
-
     @BindView(R.id.detail_tabs)
     TabLayout tabLayout;
     @BindView(R.id.detail_viewpager)
@@ -65,6 +60,9 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
     TextView site;
     @BindView(R.id.txt_detail_location)
     TextView location;
+    private String uName;
+    private boolean isAvatarShown = true;
+    private int maxScrollSize;
 
     @SuppressLint("PrivateResource")
     @Override
@@ -176,6 +174,11 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
     public static class SectionPagerAdapter extends FragmentPagerAdapter {
         private static final int TAB_COUNT = 2;
         private final Context mContext;
+        @StringRes
+        private final int[] TAB_TITLES = new int[]{
+                R.string.tab_follower,
+                R.string.tab_following
+        };
         private String username;
 
         public SectionPagerAdapter(Context context, FragmentManager fm, String username) {
@@ -203,12 +206,6 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         public int getCount() {
             return TAB_COUNT;
         }
-
-        @StringRes
-        private final int[] TAB_TITLES = new int[]{
-                R.string.tab_follower,
-                R.string.tab_following
-        };
 
         @Override
         public CharSequence getPageTitle(int i) {

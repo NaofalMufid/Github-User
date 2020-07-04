@@ -51,6 +51,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         return mData.size();
     }
 
+    public interface OnItemClickCallback {
+        void onItemClicked(User data);
+    }
+
     public static class UserViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.txt_htmlUrl)
         TextView html_url;
@@ -72,9 +76,5 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                     .centerCrop()
                     .into(avatar);
         }
-    }
-
-    public interface OnItemClickCallback {
-        void onItemClicked(User data);
     }
 }

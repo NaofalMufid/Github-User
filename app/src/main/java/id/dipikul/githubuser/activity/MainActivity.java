@@ -1,11 +1,5 @@
 package id.dipikul.githubuser.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +9,12 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.dipikul.githubuser.R;
@@ -22,15 +22,14 @@ import id.dipikul.githubuser.adapter.UserAdapter;
 import id.dipikul.githubuser.model.MainModel;
 
 public class MainActivity extends AppCompatActivity {
-    private UserAdapter adapter;
-    private MainModel mainModel;
-
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
     @BindView(R.id.linearNotFound)
     LinearLayout linearNotFound;
     @BindView(R.id.main_search_username)
     SearchView searchUsername;
+    private UserAdapter adapter;
+    private MainModel mainModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
