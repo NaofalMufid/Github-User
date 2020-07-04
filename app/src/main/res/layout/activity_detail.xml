@@ -118,7 +118,7 @@
             android:id="@+id/detail_tabs"
             android:layout_width="fill_parent"
             android:layout_height="?attr/actionBarSize"
-            app:tabSelectedTextColor="?android:attr/textColorPrimary"
+            app:tabSelectedTextColor="?android:attr/textColorPrimaryInverse"
             app:tabIndicatorColor="?android:attr/textColorPrimaryInverse"
             app:tabIndicatorHeight="4dp" />
     </com.google.android.material.appbar.AppBarLayout>

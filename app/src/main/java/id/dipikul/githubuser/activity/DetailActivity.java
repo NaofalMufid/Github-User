@@ -116,9 +116,9 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
                         company.setVisibility(View.GONE);
                     else company.setText(responseObject.getString("company"));
 
-                    if (responseObject.getString("site").equals("null"))
+                    if (responseObject.getString("blog").equals("null"))
                         site.setVisibility(View.GONE);
-                    else site.setText(responseObject.getString("site"));
+                    else site.setText(responseObject.getString("blog"));
 
                     if (responseObject.getString("location").equals("null"))
                         location.setVisibility(View.GONE);
@@ -168,7 +168,7 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         }
     }
 
-    public void showProgressBar(Boolean state) {
+    private void showProgressBar(Boolean state) {
         if (state) progressBar.setVisibility(View.VISIBLE);
         else progressBar.setVisibility(View.GONE);
     }

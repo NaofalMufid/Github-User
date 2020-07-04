@@ -34,13 +34,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserAdapter.UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.users_item, parent, false);
         return new UserViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final UserAdapter.UserViewHolder holder, int position) {
         holder.setItem(mData.get(position));
 
         holder.itemView.setOnClickListener(view -> onItemClickCallback.onItemClicked(mData.get(holder.getAdapterPosition())));
@@ -58,7 +58,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         TextView username;
         @BindView(R.id.img_avatar)
         ImageView avatar;
-
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);

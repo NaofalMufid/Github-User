@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GithubUser</string>
     <string name="search">Search</string>
-    <string name="seacrh_hint">Enter username</string>
+    <string name="search_hint">Enter username</string>
     <string name="change_language">Change language</string>
 
     <string name="username">Username</string>

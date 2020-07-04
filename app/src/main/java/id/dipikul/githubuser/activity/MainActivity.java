@@ -1,5 +1,11 @@
 package id.dipikul.githubuser.activity;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -8,12 +14,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         if (searchManager != null) {
             searchUsername.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
             searchUsername.onActionViewExpanded();
-            searchUsername.setQueryHint(getResources().getString(R.string.seacrh_hint));
+            searchUsername.setQueryHint(getResources().getString(R.string.search_hint));
             searchUsername.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {

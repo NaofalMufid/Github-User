@@ -42,7 +42,7 @@ public class FollowAdapter extends RecyclerView.Adapter<FollowAdapter.FollowView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FollowAdapter.FollowViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull FollowViewHolder holder, int position) {
         holder.setItem(mData.get(position));
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), DetailActivity.class);
